@@ -2,7 +2,7 @@ package com.dj;
 
 import java.util.Scanner;
 
-public class Lession2 {
+public class Lesson2 {
 	public static void main(String[] args) {
 
 		int n = 19;
