@@ -79,8 +79,8 @@ public class Lesson5 {
 		int n = sc.nextInt();
 		if (n < 0)
 			n = -n;
-		int maximum = 0;
-		int minmum = 1;
+		int maximum = n % 10;
+		int minmum = n / 10;
 		while (n > 0) {
 			int currDigit = n % 10;
 
