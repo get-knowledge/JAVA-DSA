@@ -125,28 +125,54 @@ public class Lesson8 {
 //        }
 
 
-        for(int row=1;row<=(2*n)-1;row++){
-
-            if(row>=1 && row<=n){
-                for(int space=1;space<=n-row;space++){
-                    System.out.print(" ");
-                }
-                for(int start=1;start<=row;start++){
-                    System.out.print("* ");
-                }
-
-            }else{
-                for(int space=1;space<=row-n;space++){
-                    System.out.print(" ");
-                }
-                for(int start=row;start<=(2*n)-1;start++){
-                    System.out.print("* ");
-                }
-            }
-            System.out.println();
-        }
+		/*
+		 * for(int row=1;row<=(2*n)-1;row++){
+		 * 
+		 * if(row>=1 && row<=n){ for(int space=1;space<=n-row;space++){
+		 * System.out.print(" "); } for(int start=1;start<=row;start++){
+		 * System.out.print("* "); }
+		 * 
+		 * }else{ for(int space=1;space<=row-n;space++){ System.out.print(" "); }
+		 * for(int start=row;start<=(2*n)-1;start++){ System.out.print("* "); } }
+		 * System.out.println(); }
+		 */
 
 
+		/*
+		 * for (int row = 1; row <= n; row++) { if (row == 1 || row == 2 || row == n) {
+		 * for (int star = 1; star <= row; star++) { System.out.print("*"); } } else {
+		 * System.out.print("*"); for (int spaces = 1; spaces <= row - 2; spaces++) {
+		 * System.out.print(" "); } System.out.print("*"); }
+		 * 
+		 * System.out.println(); }
+		 */
+        
+		int m = n;
+		for (int row = 1; row <= (2 * n) - 1; row++) {
+			if (row >= 1 && row <= n) {
+
+				for (int space = 1; space <= row; space++) {
+					System.out.print(" ");
+				}
+				for (int space = 0; space <= n - row; space++) {
+					System.out.print("*" + " ");
+				}
+				System.out.println();
+
+			} else {
+				for (int space = 1; space < m; space++) {
+					System.out.print(" ");
+				}
+
+				for (int space = 0; space <= row - n; space++) {
+					System.out.print("*" + " ");
+				}
+				m--;
+				System.out.println();
+			}
+		}
+        
+        
     }
 }
 /*
